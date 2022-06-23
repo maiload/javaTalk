@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>intro.html</title>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#javatalk').click(function(){
+			open("/talk/login","login",
+			"width=390, height=550, location=yes, resizable=yes, top=200, left=500");
+		})
+	});
+</script>
+</head>
+<body>
+	<div><a href="#" id="javatalk" style="font-size: 2em;">javatalk 시작하기</a></div>
+	
+	
+</body>
+</html>
