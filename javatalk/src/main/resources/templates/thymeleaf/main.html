@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>main.html</title>
+<th:block th:include="thymeleaf/common/common_head"></th:block>
+<script type="text/javascript">
+	$(function(){
+		$('.fa-angle-down').hide();
+		//생일인 친구
+		var bool=false;
+		$('#birth-angle').click(function(){
+			$('#birth').slideToggle();
+			bool=!bool;	
+			if(bool){
+				$(this).find('.fa-angle-down').show();
+				$(this).find('.fa-angle-up').hide();
+			}else{
+				$(this).find('.fa-angle-down').hide();
+				$(this).find('.fa-angle-up').show();
+			}
+		});
+		
+		//친구
+		var bool2=false;
+		$('#friends-angle').click(function(){
+			$('#friends').toggle();
+			bool2=!bool2;	
+			if(bool2){
+				$(this).find('.fa-angle-down').show();
+				$(this).find('.fa-angle-up').hide();
+			}else{
+				$(this).find('.fa-angle-down').hide();
+				$(this).find('.fa-angle-up').show();
+			}
+		});
+		
+		
+	});
+</script>
+</head>
+<body>
+<section>
+<!-- Left_Side -->
+	<div class="d-flex side-left justify-content-center p-2">
+		<div class="d-flex justify-content-center">
+			<ul style="padding-left: 0;">
+				<li class="list-group-item" style="padding: 20px 10px;"><a class="nav-list active" href="#"><i class="fa-solid fa-user" style="font-size: 22px;"></i></a></li>
+				<li class="list-group-item" style="padding: 15px 10px;"><a class="nav-list" th:href="@{/chat}"><i class="fa-solid fa-comment" style="font-size: 22px;"></i></a></li>
+				<li class="list-group-item" style="padding: 15px 10px;"><a class="nav-list" href="#"><i class="fa-solid fa-ellipsis" style="font-size: 22px;"></i></a></li>
+			</ul>
+			<button type="button" class="btn btn-outline-light side-left-btn" style="bottom:70px"><i class="fa-solid fa-bell"></i></button>
+			<button type="button" class="btn btn-outline-light side-left-btn" style="bottom:30px"><i class="fa-solid fa-gear"></i></button>
+		</div>
+	</div>
+	
+<!-- Right_Side -->
+	<div class="side-right">
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item list-item-top">
+		  	친구
+		  	<span style="float:right;">
+		  		<button type="button" class="btn btn-outline-light side-right-btn"><i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i></button>
+			  	<button type="button" class="btn btn-outline-light side-right-btn"><i class="fa-solid fa-user-plus" style="font-size: 18px;"></i></button>
+		  	</span>
+		  </li>
+		  
+		  <!-- myProfile -->
+		  <li class="list-group-item" style="padding: 10px 5px; margin-right: 7px;">
+		  	<img th:src="@{/images/dog.jpg}" style="width: 55px; border-radius: 1.3rem;" alt="...">
+		  	<span style="margin-left: 7px; font-size: 13px;">정진</span>
+		  </li>
+		  
+		  <!-- birthDay -->
+		  <li class="list-group-item" style="padding: 3px 5px; margin-right: 7px;">
+		  	<div style="margin-bottom: 8px;">
+		  		<span style="font-size: 11px; color: #b5b3b3;">생일인 친구</span>
+		  		<a href="#" style="float: right; color: #b5b3b3; padding-right: 2px;" id="birth-angle">
+		  			<i class="fa-solid fa-angle-up"></i>
+		  			<i class="fa-solid fa-angle-down"></i>
+		  		</a>
+		  	</div>
+		  	<div id="birth" style="margin-bottom: 5px;">
+		  		<button type="button" class="btn cake-btn" disabled><i class="fa-solid fa-cake-candles" style="color: white;"></i></button>
+		  		<span style="font-size: 12px; margin-left: 3px;">친구의 생일을 확인해보세요!</span>
+		  	</div>
+		  </li>
+		  
+		  <!-- friends -->
+		  <li class="list-group-item" style="padding: 3px 5px; margin-right: 7px;">
+		  	<div style="margin-bottom: 8px;">
+		  		<span style="font-size: 11px; color: #b5b3b3;">친구</span>
+		  		<a href="#" style="float: right; color: #b5b3b3; padding-right: 2px;" id="friends-angle">
+		  			<i class="fa-solid fa-angle-up"></i>
+		  			<i class="fa-solid fa-angle-down"></i>
+		  		</a>
+		  	</div>
+		  	<div id="friends" style="margin-bottom: 5px;">
+		  		<button type="button" class="btn friends-btn" disabled><i class="fa-solid fa-user" style="color: #e7e7e7bd"></i></button>
+		  		<span style="font-size: 12px; margin-left: 3px;">아빠</span>
+		  	</div>
+		  </li>
+		  <!-- <li class="list-group-item">And a fifth one</li> -->
+		</ul>
+	</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

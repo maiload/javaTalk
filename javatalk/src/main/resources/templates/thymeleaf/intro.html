@@ -8,13 +8,20 @@
 	$(function(){
 		$('#javatalk').click(function(){
 			open("/talk/login","login",
-			"width=390, height=550, location=yes, resizable=yes, top=200, left=500");
-		})
+			"width=400, height=550, location=yes, resizable=yes, top=200, left=500");
+		});
+		
+		$('#main').click(function(){
+			open("/talk/main","main",
+			"width=400, height=550, location=yes, resizable=yes, top=200, left=500");
+		});
+		
 	});
 </script>
 </head>
 <body>
 	<div><a href="#" id="javatalk" style="font-size: 2em;">javatalk 시작하기</a></div>
+	<div><a href="#" id="main" style="font-size: 2em;">main</a></div>
 	
 	
 </body>

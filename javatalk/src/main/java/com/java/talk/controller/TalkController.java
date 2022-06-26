@@ -23,4 +23,19 @@ public class TalkController {
 		
 		return "thymeleaf/login";
 	}
+	
+	@GetMapping("/main")
+	public String main() {
+		logger.info("메인 화면");
+		
+		return "thymeleaf/main";
+	}
+	
+	@GetMapping("/chat")
+	public String chat() {
+		logger.info("채팅 화면");
+		
+		return "thymeleaf/chat";
+	}
+	
 }
