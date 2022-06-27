@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>profile.html</title>
+<script src="https://kit.fontawesome.com/a7d69e61ec.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#profile-pic').click(function(){
+			open("/talk/picture","picture",
+			"width=550, height=400, location=yes, resizable=yes, top=200, left=810");
+		});
+		
+	});
+</script>
+</head>
+<body style="margin: 0;background: #848B91;">
+<div class="profile-bg">
+	<a href="#" id="profile-pic"><img th:src="@{/images/dog.jpg}" style="width: 76px; border-radius: 1.5rem;" alt="..."></a>
+	<span style="position: absolute;margin-top: 83px;font-size: 16px;">정진</span>
+</div>
+<div class="d-flex justify-content-evenly">
+	<button class="more-btn" style="background: #848B91; color:white;font-size: 12px;"><p><i class="fa-solid fa-comment" style="color:white;"></i></p>나와의 채팅</button>
+	<button class="more-btn" style="background: #848B91; color:white;font-size: 12px;"><p><i class="fa-solid fa-pen" style="color:white;"></i></p>프로필 관리</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

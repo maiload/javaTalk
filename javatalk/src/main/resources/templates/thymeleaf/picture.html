@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>picture.html</title>
+<script src="https://kit.fontawesome.com/a7d69e61ec.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<style type="text/css">
+	body {
+		background: lightgray;
+	}
+	
+	img {
+		height: 430px;
+	}
+</style>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#carouselExampleControlsNoTouching').carousel({
+			  wrap: false
+			});
+	});
+</script>
+</head>
+<body>
+	<div id="carouselExampleControlsNoTouching" class="carousel" data-bs-touch="false" data-bs-interval="false">
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDZfMjQx%2FMDAxNjQ0MTE3MjgyODYw.BP8ocYQ3DwZ4QxwREn9lMtDP4osZiw7egMdRSZkcM0Qg.saS2Xp82GkufYgtTdh1u7z3z3VKUoLbCI31OgxEjJeQg.JPEG.susang66%2F10.jpg&type=sc960_832" class="d-block" alt="...">
+	    </div>
+	    <div class="carousel-item">
+	      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMThfMTM4%2FMDAxNjQ3NjEyMjMwNTY4.Ta-_sGyX4qRZV2A9E8Hxk6-V5IsXsbUL_1EHhQEwJBsg.aMWjZNDw5poTj8j70tR_HoeTUw8HbBsnmJwDIaJxtLMg.JPEG.oneulst1%2F07--46.jpg&type=sc960_832" class="d-block" alt="...">
+	    </div>
+	    <div class="carousel-item">
+	      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMjdfMjQg%2FMDAxNjQ1OTU5NTgwNjAy.olk86DACIQAiyQBbqNNbhiwBE5v2J7lMjUyxFO1NbRkg.mVkSr5FhT6NTF-Z6Y_AHzoIRo-fi8g6Qiqyq0Y_zTzYg.JPEG.acttosun08%2Fb4f3403a7e0c49e04011e6338a3d5af8.jpg&type=sc960_832" class="d-block" alt="...">
+	    </div>
+	  </div>
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="visually-hidden">Previous</span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="visually-hidden">Next</span>
+	  </button>
+	</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

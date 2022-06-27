@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>left_nav.html</title>
+</head>
+<body>
+<!-- Left_Side -->
+	<div th:fragment="left_side" class="d-flex side-left justify-content-center p-2">
+		<div class="d-flex justify-content-center">
+			<ul style="padding-left: 0;">
+				<li class="list-group-item" style="padding: 20px 10px;"><a class="nav-list" th:href="@{/main}"><i class="fa-solid fa-user" style="font-size: 22px;"></i></a></li>
+				<li class="list-group-item" style="padding: 15px 10px;">
+					<a class="nav-list" th:href="@{/chat}">
+						<i class="fa-solid fa-comment" style="font-size: 22px;"></i>
+						<span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger notice-badge" style="left: 90%!important;">
+						    999
+					    </span>
+				    </a>
+				</li>
+				<li class="list-group-item" style="padding: 15px 10px;"><a class="nav-list" th:href="@{/more}"><i class="fa-solid fa-ellipsis" style="font-size: 22px;"></i></a></li>
+			</ul>
+			<button type="button" class="btn btn-outline-light side-left-btn" style="bottom:105px; color:#2C3E50;" id="bell"><i class="fa-solid fa-bell"></i></button>
+			<button type="button" class="btn btn-outline-light side-left-btn" style="bottom:105px" id="bell-slash"><i class="fa-solid fa-bell-slash"></i></button>
+			<div class="dropend">
+				<button type="button" class="btn btn-outline-light side-left-btn" style="bottom:60px; left: 21px;" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></button>
+				<ul class="dropdown-menu">
+				    <li><p class="dropdown-item">설정</p></li>
+				    <li><p class="dropdown-item">로그아웃</p></li>
+				    <li><p class="dropdown-item">종료</p></li>
+				</ul>
+			</div>		
+		</div>
+	</div>
+
+</body>
+</html>

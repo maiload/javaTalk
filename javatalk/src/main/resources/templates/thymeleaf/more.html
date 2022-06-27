@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>more.html</title>
+<script src="https://kit.fontawesome.com/a7d69e61ec.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.min.js}"></script>
+<script type="text/javascript">
+	$(function(){
+		//메뉴 버튼 활성화
+		$('.nav-list').eq('2').addClass('active');
+		
+		//알림
+		$('#bell-slash').hide();
+		$('#bell').click(function(){
+			$(this).toggle();
+			$('#bell-slash').toggle();
+		});
+		$('#bell-slash').click(function(){
+			$(this).toggle();
+			$('#bell').toggle();
+		});
+		
+	});
+</script>
+</head>
+<body>
+<section>
+<!-- Left_Side -->
+	<div th:replace="thymeleaf/fragments/left_nav.html :: left_side"></div>
+
+<!-- Right_Side -->
+	<div class="side-right" style="margin-left: 68px;">
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item list-item-top" style="padding-left: 20px; position: static;">
+		  	더보기
+		  </li>
+		  <!-- card -->
+		  <li class="list-group-item" style="border:0;margin-top: 10px;margin-left: 7px; position: static;">
+		  	<div class="card" style="width: 17.7rem;background:#cccccc2e;border: 1px solid #80808026;">
+			  <div class="card-body">
+				  <div style="float: left;">
+				    <h6 class="card-title" style="font-weight: bold;">이정진</h6>
+				    <p style="margin-bottom: 3px;">maiload@naver.com</p>
+				  </div>
+				  <div style="float: right;margin-top: 7px;">
+				  	<i class="fa-solid fa-id-card" style="font-size: 35px;color: gray;/* color:#4b75ed; */"></i>
+				  </div>
+			  </div>
+			  <div class="card-footer" style="border:0; padding: 0 5px;">
+			  	<button class="email-btn">이메일 인증하기<span><i class="fa-solid fa-angle-right"></i></span></button>
+			  </div>
+			</div>
+		  </li>
+		  
+		  <!-- buttons -->
+		  <li class="list-group-item" style="position: static;">
+		  <div class="d-flex justify-content-between">
+		  	<button class="more-btn"><p><i class="fa-solid fa-calendar"></i></p>캘린더</button>
+		  	<button class="more-btn"><p><i class="fa-solid fa-tv"></i></p>카카오TV</button>
+		  	<button class="more-btn"><p><i class="fa-solid fa-gift"></i></p>선물하기</button>
+		  </div>
+		  <div class="d-flex justify-content-between">
+		  	<button class="more-btn"><p><i class="fa-solid fa-circle-info"></i></p>정보</button>
+		  	<button class="more-btn"><p><i class="fa-solid fa-bullhorn"></i></p>공지사항</button>
+		  	<button class="more-btn"><p><i class="fa-solid fa-circle-question"></i></p>도움말</button>
+		  </div>
+		  </li>
+		</ul>
+	</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
